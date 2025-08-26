@@ -10,19 +10,7 @@
     <meta name="description" content="Rejoignez CSRG Community pour créer, partager et découvrir des jeux Roblox. Trouvez des développeurs et jouez à nos créations.">
     <link rel="stylesheet" href="style.css">
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
+        /* Boutons */
         .btn-green {
             background-color: green;
             color: white;
@@ -49,24 +37,30 @@
             padding: 5px 10px;
             cursor: pointer;
         }
-         .text-red {
+
+        .text-red {
             color: red;
         }
 
+        .text-black {
+            color: black;
+        }
+
+        /* Fenêtres */
         #fenetreJeux, #fenetreRegles {
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 1000;
-            background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
-            backdrop-filter: blur(8px); /* Effet de flou derrière */
+            z-index: 1001;
+            background: rgba(0, 0, 0, 0.85);
             padding: 20px;
             border: 1px solid black;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             width: 80%;
             max-width: 500px;
+            color: white;
         }
 
         #rechercheJeux {
@@ -80,15 +74,22 @@
             display: none;
         }
 
-        .text-black {
-            color: black;
+        /* Particules en fond */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: black;
         }
     </style>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7908725859808794"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7908725859808794" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Particules -->
     <div id="particles-js"></div>
 
     <header>
@@ -96,33 +97,33 @@
         <h1 class="text-white">Bienvenue à la CSRG Community !</h1>
     </header>
 
-    <!-- (tout le reste de ton code reste inchangé) -->
+    <!-- Le reste de ton contenu inchangé -->
+    <!-- ... (tout ton contenu original ici, inchangé, y compris les sections, boutons, vidéos, scripts de recherche, etc.) -->
 
     <footer>
         <p class="text-black">© 2025 CSRG Community</p>
     </footer>
 
+    <!-- Scripts pour particules -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         particlesJS("particles-js", {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#ffffff" },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: true },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out" }
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#00ff00" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#00ff00", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 2 }
             },
-            interactivity: {
-                detect_on: "canvas",
-                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } },
-                modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
+            "interactivity": {
+                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } }
             },
-            retina_detect: true
+            "retina_detect": true
         });
     </script>
 
-    <!-- (tes autres scripts restent inchangés) -->
+    <!-- Tes autres scripts existants (règles, jeux, recherche, chatbase, ads, etc.) -->
 </body>
 </html>
